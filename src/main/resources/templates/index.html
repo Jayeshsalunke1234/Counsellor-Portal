@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="container text-center">
+         <h1>Counsellor Portal</h1>
+      </div>
+         <div class="container mt-5">
+             <div class="row justify-content-center">
+                 <div class="col-md-6">
+                      <div class="card text-bg-light mb-3">
+                      <div class="card-header">
+                             <h3>Login Here</h3>
+             <font style="color:red">
+             <p th:text="${emsg}">
+             </font>
+                      </div>
+                      <div class="card-body">
+                               <form th:object="${cousellor}" th:action="@{/login}" method="post">
+                 <table>
+                      <tr>
+                         <td>Email:</td>
+                         <td><input type="email" th:field="*{email}"></td>
+                      </tr>
+                      <tr>
+                         <td>Password:</td>
+                         <td><input type="password" th:field="*{password}"></td>
+                      </tr>
+                       <tr>
+                         
+                         <td><input type="submit" class="btn btn-primary" value="submit"></td>
+                      </tr>
+                      <tr>
+                       
+                        <td><a th:href="@{/register}">Register Here</a></td>
+                     </tr>
+ 
+                      
+                 
+                 </table>
+           
+           </form>
+ 
+                      
+                      
+                      </div>
+                           
+        
+                      </div>
+                 </div>
+             </div>
+         </div>
+       
+       <div class="container">
+                  
+       </div> 
+   
+      
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  </body>
+</html>
